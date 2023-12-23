@@ -1,4 +1,4 @@
-# Project Title: AI-Powered Code Translator Tool
+# Project Title: AI-Powered Code Translator and Generator Tool
 
 ## Objective:
 To develop a robust tool that leverages OpenAI's GPT for code translation across programming languages.
