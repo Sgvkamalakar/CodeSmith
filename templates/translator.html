@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeSmith-Code Translator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.png">
+    <script src="/static/js/particles.js"></script>
+    <style>
+      .animated-gif {
+        width: 200px;
+        height:200px;
+    }
+    
+      canvas{
+        margin-top:-820px;
+        display:block;
+        background-color: #353333;
+        vertical-align:bottom;
+      }
+      
+      
+    </style>
+</head>
+  
+<body>
+  <div id="particles-js">
+  <div class="navbar">
+    <a href="../index.html"><i class="fa-solid fa-house"></i></a>
+    <a href="translator.html">Code Translator</a>
+    <a href="generator.html">Code Generator</a>
+    <a href="https://github.com/Sgvkamalakar" target="_blank">Upvote here</a>
+    <a href="https://www.linkedin.com/in/sgvkamalakar" target="_blank">Connect with Me</a>
+    <button class="btn mode">
+      <i class="btn__icon light-mode-icon bi bi-moon"></i>
+      <i class="btn__icon dark-mode-icon far fa-sun"></i>
+    </button>
+  </div>
+  
+
+  <div class="loader-container">
+    <img draggable="false" src="/static/images/preloader.gif" alt="">
+  </div>
+    
+  
+<div class="container">
+  
+  <h1 class="form-example">Code Translator</h1>
+    <div class="form-group">    
+      <input type="password" id="secretKey" placeholder="Gemini API Key" name="secretKey" required>
+      <p>If you don't have an API key, you can create one here <a href="https://makersuite.google.com/app/apikey" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square" id="api-icon"></i></a></p>
+      <button class="btn clear" onclick="clearField('secretKey')">Clear</button>
+      
+      <button class="btn submit" id="submitBtn">Translate</button>
+    </div>
+</div>
+
+<div id="Loading" class="custom-alert">
+  <div class="clear-alert-content">
+    <img src="/static/images/loading.gif" alt="Animated GIF" class="animated-gif">
+  </div>
+</div>
+<div class="row">
+  <div class="column-left">
+      <div class="form-group option">
+          <label for="dropdownLeft">Input Language</label>
+          <select id="input_lang" name="input_lang"class="fixed-dropdown">
+              <option value="C">C</option>
+              <option value="C#">C#</option>
+              <option value="C++">C++</option>
+              <option value="Dart">Dart</option>
+              <option value="Elixir">Elixir</option>
+              <option value="Erlang">Erlang</option>
+              <option value="Go">Go</option>
+              <option value="Java">Java</option>
+              <option value="JavaScript">JavaScript</option>
+              <option value="Kotlin">Kotlin</option>
+              <option value="PHP">PHP</option>
+              <option value="Python">Python</option>
+              <option value="Python3" selected>Python3</option>
+              <option value="Racket">Racket</option>
+              <option value="Ruby">Ruby</option>
+              <option value="Rust">Rust</option>
+              <option value="Scala">Scala</option>
+              <option value="Swift">Swift</option>
+              <option value="TypeScript">TypeScript</option>
+            </select>
+         </div>
+      <div class="form-group code">
+        <button class="btn codeclear" onclick="clearField('inputcode')">Clear</button>
+        <div id="clearAlert2" class="custom-alert">
+          <div class="clear-alert-content">
+            <img src="/static/images/clear.gif" alt="Animated GIF" class="animated-gif">
+          </div>
+        </div>
+        <button class="btn codecopy" onclick="copyText('inputcode')">Copy</button>
+        <div id="copyAlert1" class="custom-alert">
+          <div class="alert-content">
+            <img src="/static/images/success.gif" alt="Animated GIF" class="animated-gif">
+          </div>
+        </div>
+          <textarea id="inputcode" name="inputcode" style="width: 659px; height: 378px;" placeholder="Enter your code here" required></textarea>
+          </div>
+      
+  </div>
+
+  <div class="column-right">
+      <div class="form-group option">
+          <label for="dropdownRight">Target Language</label>
+          <select id="target_lang" name="target_lang" class="fixed-dropdown">
+              <option value="C">C</option>
+              <option value="C#">C#</option>
+              <option value="C++">C++</option>
+              <option value="Dart">Dart</option>
+              <option value="Elixir">Elixir</option>
+              <option value="Erlang">Erlang</option>
+              <option value="Go">Go</option>
+              <option value="Java" selected>Java</option>
+              <option value="JavaScript">JavaScript</option>
+              <option value="Kotlin">Kotlin</option>
+              <option value="PHP">PHP</option>
+              <option value="Python">Python</option>
+              <option value="Python3">Python3</option>
+              <option value="Racket">Racket</option>
+              <option value="Ruby">Ruby</option>
+              <option value="Rust">Rust</option>
+              <option value="Scala">Scala</option>
+              <option value="Swift">Swift</option>
+              <option value="TypeScript">TypeScript</option>            
+          </select>
+      </div>
+      <div class="form-group code">
+        <button class="btn codeclear" onclick="clearField('targetcode')">Clear</button>
+        <div id="clearAlert3" class="custom-alert">
+          <div class="clear-alert-content">
+            <img src="/static/images/clear.gif" alt="Animated GIF" class="animated-gif">
+          </div>
+        </div>
+        <button class="btn codecopy" onclick="copyText('targetcode')">Copy</button>
+        <div id="copyAlert2" class="custom-alert">
+          <div class="alert-content">
+            <img src="/static/images/success.gif" alt="Animated GIF" class="animated-gif">
+          </div>
+        </div>
+        <textarea id="targetcode" name="targetcode" style="width: 659px; height: 378px;" placeholder="Your target code"></textarea>
+    </div>
+  </div>
+</div>
+</div>
+
+<script src="/static/js/particles.js"></script> 
+<script src="/static/js/app.js"></script> 
+<script type="importmap">
+  {
+    "imports": {
+      "@google/generative-ai": "https://esm.run/@google/generative-ai"
+    }
+  }
+</script>
+<script type="module">
+  import { GoogleGenerativeAI } from "@google/generative-ai";
+  document.getElementById('targetcode').value = "Your target Code";
+  document.getElementById('submitBtn').addEventListener('click', async function(event) {
+    event.preventDefault();
+    
+    const apiKey = document.getElementById('secretKey').value.trim();
+    const prompt = document.getElementById('inputcode').value.trim();
+    const inp_lang = document.getElementById('input_lang').value.trim();
+    const tar_lang = document.getElementById('target_lang').value.trim();
+
+    if (!apiKey || !prompt) {
+      alert('Please fill in both the API Key and the Input code to translate.');
+      return;
+    }
+    
+    const genAI = new GoogleGenerativeAI(apiKey); // Assume GoogleGenerativeAI is available globally
+
+    try {
+      var customAlert = document.getElementById('Loading');
+        var animatedGif = document.querySelector('.animated-gif');
+  
+        animatedGif.src = "/static/images/loading.gif"; 
+
+        customAlert.style.display = 'block';
+       setTimeout(function() {
+         customAlert.style.display = 'none';
+       }, 4000); 
+      const model = genAI.getGenerativeModel({ model: "gemini-pro"});
+      const result = await model.generateContent("convert the code"+prompt+" from "+inp_lang+" to "+tar_lang);
+      const response = await result.response;
+      const text = await response.text();
+
+      const outputIndex = text.indexOf('Output:');
+
+      // Get the content before 'Output'
+      const codeContent = outputIndex !== -1 ? text.substring(0, outputIndex).trim() : text.trim();
+      const codelines = codeContent.split('\n');
+      const filteredcodeLines = codelines.filter(line => !line.includes('```'));
+      const code = filteredcodeLines.join('\n').trim();
+      document.getElementById('targetcode').value = code;
+
+      console.log(text);
+    } catch (error) {
+      console.error('Error:', error.message);
+      alert('An error occurred during code generation.');
+    }
+  });
+</script>
+  <script src="/static/js/main.js"></script>
+    </body>
+</html>

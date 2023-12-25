@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeSmith-Code Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="/static/js/particles.js"></script> 
+
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.png">
+    <style>
+      .animated-gif {
+        width: 200px;
+        height:200px;
+    }
+    canvas {
+      margin-top: -1016px;
+      display: block;
+      background-color: #353333;
+      vertical-align: bottom;
+  }
+    </style>
+</head>
+  
+<body>
+  <div class="gif-container"></div>
+  <div class="loader-container">
+    <img draggable="false" src="/static/images/preloader.gif" alt="">
+  </div>
+  <div id="particles-js">
+  <div class="navbar">
+    <a href="../index.html"><i class="fa-solid fa-house"></i></a>
+    <a href="translator.html">Code Translator</a>
+    <a href="generator.html">Code Generator</a>
+    <a href="https://github.com/Sgvkamalakar" target="_blank">Upvote here</a>
+    <a href="https://www.linkedin.com/in/sgvkamalakar" target="_blank">Connect with Me</a>
+
+    <button class="btn mode">
+      <i class="btn__icon light-mode-icon bi bi-moon"></i>
+      <i class="btn__icon dark-mode-icon far fa-sun"></i>
+    </button>
+  </div>
+  
+    <div class="container">
+      
+      <h1 class="form-example">Code Generator</h1>
+      <div class="form-group">    
+        <input type="password" id="secretKey" placeholder="Gemini API Key" name="secretKey" required>
+        <p>If you don't have an API key, you can create one here <a href="https://makersuite.google.com/app/apikey" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square" id="api-icon"></i></a></p>
+        <button class="btn clear" onclick="clearField('secretKey')">Clear</button>
+        <button class="btn submit" id="submitBtn">Generate</button>
+      </div>
+    </div>
+    <div id="Loading" class="custom-alert">
+      <div class="clear-alert-content">
+        <img src="/static/images/loading.gif" alt="Animated GIF" class="animated-gif">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="column-left">
+          <div class="form-group option">
+              <label>Enter your prompt</label>
+            </div>
+          <div class="form-group code">
+            <button class="btn codeclear" onclick="clearField('promptTextArea')">Clear</button>
+            <div id="clearAlert2" class="custom-alert">
+              <div class="clear-alert-content">
+                <img src="/static/images/clear.gif" alt="Animated GIF" class="animated-gif">
+              </div>
+            </div>
+            <button class="btn codecopy" onclick="copyText('promptTextArea')">Copy</button>
+            <div id="copyAlert1" class="custom-alert">
+              <div class="alert-content">
+                <img src="/static/images/success.gif" alt="Animated GIF" class="animated-gif">
+              </div>
+            </div>
+              <textarea id="promptTextArea" name="promptTextArea" style="height: 570px;width: 585px;" placeholder="Enter your prompt here" required></textarea>
+              </div>
+          
+      </div>
+    
+      <div class="column-right">
+          <div class="form-group option">
+              <label for="dropdownRight">Your code in</label>
+              <select id="target_lang" name="target_lang" class="fixed-dropdown">
+                <option value="C">C</option>
+                <option value="C#">C#</option>
+                <option value="C++">C++</option>
+                <option value="Dart">Dart</option>
+                <option value="Elixir">Elixir</option>
+                <option value="Erlang">Erlang</option>
+                <option value="Go">Go</option>
+                <option value="Java">Java</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Kotlin">Kotlin</option>
+                <option value="PHP">PHP</option>
+                <option value="Python">Python</option>
+                <option value="Python3" selected>Python3</option>
+                <option value="Racket">Racket</option>
+                <option value="Ruby">Ruby</option>
+                <option value="Rust">Rust</option>
+                <option value="Scala">Scala</option>
+                <option value="Swift">Swift</option>
+                <option value="TypeScript">TypeScript</option>            
+            </select>
+          </div>
+
+        <div class="form-group code">
+            <button class="btn codeclear" onclick="clearField('CodeArea')">Clear</button>
+            <div id="clearAlert3" class="custom-alert">
+              <div class="clear-alert-content">
+                <img src="/static/images/clear.gif" alt="Animated GIF" class="animated-gif">
+              </div>
+            </div>
+            <button class="btn codecopy" onclick="copyText('CodeArea')">Copy</button>
+            <div id="copyAlert2" class="custom-alert">
+              <div class="alert-content">
+                <img src="/static/images/success.gif" alt="Animated GIF" class="animated-gif">
+              </div>
+            </div>
+            <div id="customAlert1" class="custom-alert">
+              <div class="clear-alert-content">
+                <img src="/static/images/clear.gif" alt="Animated GIF" class="animated-gif">
+              </div>
+            </div>
+            <textarea id="CodeArea" name="CodeArea" style="width: 659px; height: 378px;" placeholder="Your target code"></textarea>
+        </div>
+        <div class="code-display">
+          <div class="form-group option">
+          <label for="dropdownRight">Output</label>
+          </div>
+          <div id="generatedCode" class="code"></div>
+          <textarea id="OutputArea" style="width: 659px; height: 140px;" placeholder="Output" value="Output"></textarea>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+    <script src="/static/js/particles.js"></script> 
+<script src="/static/js/app.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "@google/generative-ai": "https://esm.run/@google/generative-ai"
+      }
+    }
+  </script>
+  <script type="module">
+    import { GoogleGenerativeAI } from "@google/generative-ai";
+    document.getElementById('CodeArea').value = "Code";
+    document.getElementById('OutputArea').value = "Output";
+    document.getElementById('submitBtn').addEventListener('click', async function(event) {
+      event.preventDefault();
+      
+      const apiKey = document.getElementById('secretKey').value.trim();
+      const prompt = document.getElementById('promptTextArea').value.trim();
+
+      if (!apiKey || !prompt) {
+        alert('Please fill in both the API Key and the Prompt.');
+        return;
+      }
+      
+      const genAI = new GoogleGenerativeAI(apiKey); // Assume GoogleGenerativeAI is available globally
+
+      try {
+        var customAlert = document.getElementById('Loading');
+        var animatedGif = document.querySelector('.animated-gif');
+        var target = document.getElementById("target_lang").value;
+        animatedGif.src = "/static/images/loading.gif"; 
+
+        customAlert.style.display = 'block';
+       setTimeout(function() {
+         customAlert.style.display = 'none';
+       }, 4000); 
+        const modified_propmt=prompt+" code in "+target+" and print output in seperate line";
+        const model = genAI.getGenerativeModel({ model: "gemini-pro"});
+        const result = await model.generateContent(modified_propmt);
+        console.log(modified_propmt);
+
+        const response = await result.response;
+        const text = await response.text();
+
+        const outputIndex = text.indexOf('Output:');
+
+        // Get the content before 'Output'
+        const codeContent = outputIndex !== -1 ? text.substring(0, outputIndex).trim() : text.trim();
+        const codelines = codeContent.split('\n');
+        const filteredcodeLines = codelines.filter(line => !line.includes('```'));
+        const code = filteredcodeLines.join('\n').trim();
+        document.getElementById('CodeArea').value = code;
+
+        const outputContent = outputIndex !== -1 ? text.substring(outputIndex + 'Output:'.length).trim() : '';        
+        const lines = outputContent.split('\n');
+        const filteredLines = lines.filter(line => !line.includes('```'));
+        const opContent = filteredLines.join('\n').trim();
+        document.getElementById('OutputArea').value = opContent;
+        console.log(text);
+        
+      } catch (error) {
+        console.error('Error:', error.message);
+        alert('Invalid API Key');
+      }
+    });
+  </script>
+  <script src="/static/js/main.js"></script>
+</body>
+</html>
