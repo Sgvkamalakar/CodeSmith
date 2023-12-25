@@ -1370,6 +1370,16 @@ video {
   top: 15px;
 }
 
+.counter p{
+  color:white; 
+  margin-left:89%;
+   margin-top:-30px;
+}
+.counter img{
+  margin-left:97%; 
+  margin-top:-48px; 
+  height:24px;
+}
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
@@ -1444,6 +1454,25 @@ video {
   }
   .list-mobile {
       display: inline-block;
+  }
+  .font-semibold{
+    align-content: center;
+    align-items:center;
+  }
+  .font-semibold {
+   white-space:nowrap;
+   margin-left:90px;
+}
+  .counter p{
+    color:white; 
+    margin-left:90px;
+    font-weight:bold;
+    margin-top:20px;
+  }
+  .counter img{
+    margin-left:200px; 
+    margin-top:-48px; 
+    height:24px;
   }
 }
 
