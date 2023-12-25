@@ -1,4 +1,4 @@
-# CodeSmith
+![image](https://github.com/Sgvkamalakar/CodeSmith/assets/103712713/ef24b53a-3f1e-4af7-89a2-04a3f8b456c5)# CodeSmith
 
 [Use CodeSmith Web App](https://code-smith.vercel.app/)
 
@@ -44,6 +44,8 @@ To use CodeSmith, follow these steps:
 2. Create your `Google Gemini API Key` from [here](https://makersuite.google.com/app/apikey)
 
 ## How to Use CodeSmith
+
+[![Video Thumbnail](https://github.com/Sgvkamalakar/CodeSmith/assets/103712713/a2ebe16b-c8ee-4756-9607-8de89f6e769f)](https://clipchamp.com/watch/qh3fXIhEqN0)
 
 ### Code Translation:
 
