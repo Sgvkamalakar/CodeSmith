@@ -12,10 +12,10 @@
 
 
 ## Overview
-This repository contains the source code and documentation for the CodeSmith project, which aims to revolutionize the coding experience for developers by harnessing the capabilities of Google's Gemini AI.
+This repository contains the source code and documentation for the CodeSmith project, which aims to revolutionize the coding experience for developers by harnessing the capabilities of Google's Gemini.
 
 ### Purpose and Mission
-The primary objective of CodeSmith is to transform the coding experience for developers worldwide. By harnessing the capabilities of Google's Gemini AI, it aims to revolutionize how developers interact with code translation and generation. The project's mission is to simplify complex translation tasks while providing contextually relevant code generation, ultimately enhancing productivity and efficiency in software development.
+The primary objective of CodeSmith is to transform the coding experience for developers worldwide. By harnessing the capabilities of Google's Gemini, it aims to revolutionize how developers interact with code translation and generation. The project's mission is to simplify complex translation tasks while providing contextually relevant code generation, ultimately enhancing productivity and efficiency in software development.
 
 ## Technologies Used
 
