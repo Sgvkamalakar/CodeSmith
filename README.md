@@ -7,7 +7,7 @@
   <img src='https://github.com/Sgvkamalakar/CodeSmith/assets/103712713/c29fef71-fe12-4849-9862-3e8c441d9218' alt="Image" width="300" height="300">
 </p>
 
-### ⚠️Coders use Desktops... Try the app through Desktop/Laptop 
+### ⚠️Coders use Desktops... Try the app in Desktop/Laptop 
 
 **CodeSmith**, an AI-powered code translator and generator prototype leveraging _Google's Gemini_, is designed to facilitate seamless `Code Translation` and contextual `Code Generation` across multiple programming languages.
 
