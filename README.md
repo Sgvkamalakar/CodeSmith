@@ -1,4 +1,5 @@
-![image](https://github.com/Sgvkamalakar/CodeSmith/assets/103712713/ef24b53a-3f1e-4af7-89a2-04a3f8b456c5)# CodeSmith
+
+# CodeSmith
 
 [Use CodeSmith Web App](https://code-smith.vercel.app/)
 
