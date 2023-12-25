@@ -1358,6 +1358,128 @@ video {
   transform: scale(1.05);
 }
 
+.mobile-nav-toggle {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+  position: fixed;
+  right: 15px;
+  top: 15px;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  transition: 0.3s;
+  z-index: 999;
+  margin-top: 0;
+}
+
+
+/* Basic styles */
+.nav-container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Basic styles */
+.nav-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mobile list */
+.list-mobile a {
+  display: none;
+  padding: 8px 0;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: text-decoration 0.3s, color 0.3s; /* Added transition for color change */
+}
+
+.list-mobile a:hover {
+  text-decoration: underline;
+  color: #333; /* Change color on hover */
+}
+
+/* Desktop row */
+.row-desktop a {
+  display: inline-block;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  transition: text-decoration 0.3s, color 0.3s; /* Added transition for color change */
+}
+
+.row-desktop a:hover {
+  text-decoration: underline;
+  color: #333; /* Change color on hover */
+}
+
+/* Media query for desktop view */
+@media screen and (max-width: 800px) {
+  .row-desktop {
+      display: contents;
+  }
+  .list-mobile {
+      display: inline-block;
+  }
+}
+
+
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 45px;
+  left: 15px;
+  padding: 10px 0;
+  overflow-y: auto;
+  transition: 0.3s;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar-mobile li {
+  padding: 12px 20px;
+}
+
+.navbar-mobile li+li {
+  margin: 0;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+  font-size: 16px;
+  position: relative;
+}
 
 @media (min-width: 640px) {
   .sm\:static {
