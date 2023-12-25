@@ -1448,7 +1448,7 @@ video {
 }
 
 /* Media query for desktop view */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
   .row-desktop {
       display: contents;
   }

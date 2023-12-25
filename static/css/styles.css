@@ -10,6 +10,7 @@ body {
 }
 
 .dark-mode canvas{
+    margin-top:-50%;
     background-color:black;
   }
 
