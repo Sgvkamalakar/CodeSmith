@@ -36,7 +36,7 @@ For creating an engaging and responsive UI, particles.js was integrated, enhanci
 
 To use CodeSmith, follow these steps:
 
-1. To access CodeSmith directly, visit [CodeSmith Web App](https://your-web-app-url.com).
+1. To access CodeSmith directly, visit [CodeSmith Web App](https://code-smith.vercel.app/index.html).
 2. Create your `Google Gemini API Key` from [here](https://makersuite.google.com/app/apikey)
 
 ## How to Use CodeSmith
