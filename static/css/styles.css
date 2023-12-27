@@ -474,6 +474,18 @@ text-align: center;
         padding: 10px; /* Modify padding for smaller screens */
         margin: 0 auto; /* Center the container */
     }
+    .container {
+        max-width: 20px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.1); /* Adjust transparency */
+        border: 2px solid rgba(255, 255, 255, 0.2); /* Adjust transparency */
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Adjust shadow */
+        backdrop-filter: blur(3px);
+        border-color:black;
+        -webkit-backdrop-filter: blur(5px); /* For Safari */
+    }
 
     /* Adjust width for input fields and dropdowns */
     .form-group input[type="text"],

@@ -44,18 +44,12 @@
     </style>
 </head>
 <body>
-  <div class="loader-container">
+  <!-- <div class="loader-container">
     <img draggable="false" src="/static/images/preloader.gif" alt="">
-  </div>
-  <div class="relative isolate flex items-center gap-x-6 overflow-hidden bg-black px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
-    <div class="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl" aria-hidden="true">
-      <div class="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30" style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)"></div>
-    </div>
-    <div class="absolute left-[max(45rem,calc(50%+8rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl" aria-hidden="true">
-      <div class="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30" style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)"></div>
-    </div>
+  </div> -->
+  <div class="heading">
     <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
-      <p class="text-sm leading-6 text-white">
+      <p class="title">
         <strong class="font-semibold">Gemini - Powered Code Translator and Generator</strong>
       </p>
       
@@ -67,7 +61,7 @@
   <section class="bg-white relative">
     <header>
       <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div class="flex lg:flex-1">
+        <div class="navlogo flex lg:flex-1">
           <a href="index.html" class="-m-1.5 p-1.5">
             <span class="sr-only">CodeSmith</span>
             <img class="h-8 w-auto" src="/static/images/favicon.png" alt="CodeSmith Logo">
@@ -94,47 +88,46 @@
       </div>
     </header>
 
-    <div class="relative overflow-hidden bg-white">
+    <div class="block overflow-hidden relative">
       <div class="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
         <div class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
           <div class="sm:max-w-lg">
-            <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">CodeSmith</h1>
-            <p class="mt-4 text-xl text-gray-500">The Ultimate Code Translator and Generator</p>
+            <h1 class="CodeSmith text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">CodeSmith</h1>
+            <p class="About mt-4 text-xl text-gray-500">The Ultimate Code Translator and Generator</p>
           </div>
           <div>
-            <div class="mt-10">
-                  <!-- Decorative image grid -->
+            <div class="ImgGrid mt-10">
                   <div aria-hidden="true" class="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl">
                     <div class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
                       <div class="flex items-center space-x-6 lg:space-x-8">
                         <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                          <div class="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
+                          <div class="Img1 h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
                             <img src="/static/images/image6.png" alt="" class="h-full w-full object-cover object-center">
                           </div>
-                          <div class="h-64 w-44 overflow-hidden rounded-lg">
+                          <div class="Img12 h-64 w-44 overflow-hidden rounded-lg">
                             <img src="/static/images/image2.png" alt="" class="h-full w-full object-cover object-center">
                           </div>
                         </div>
-                        <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                          <div class="h-67 w-44 overflow-hidden rounded-lg">
+                        <div class=" grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                          <div class="Img1 h-67 w-44 overflow-hidden rounded-lg">
                             <img src="/static/images/image4.png" alt="" class="h-full w-full object-cover object-top">
                           </div>
-                          <div class="h-64 w-44 overflow-hidden rounded-lg">
+                          <div class="Img12 h-64 w-44 overflow-hidden rounded-lg">
                             <img src="/static/images/image7.png" alt="" class="h-full w-full object-cover object-center">
                           </div>
                         </div>
                         <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                          <div class="h-64 w-44 overflow-hidden rounded-lg">
+                          <div class="Img1 h-64 w-44 overflow-hidden rounded-lg">
                             <img src="/static/images/image3.png" alt="" class="h-full w-full object-cover object-center">
                           </div>
-                          <div class="h-64 w-44 overflow-hidden rounded-lg">
+                          <div class="Img12 h-64 w-44 overflow-hidden rounded-lg">
                             <img src="/static/images/image5.png" alt="" class="h-full w-full object-cover object-center">
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>                  
-              <a href="index.html" class="inline-block rounded-full border border-transparent bg-greeny px-8 py-3 text-center font-medium text-white hover:bg-greeny-500 active:bg-greeny-900 transition-all">Don't just Code.. Code Smart</a>
+              <a href="index.html" class="coder inline-block rounded-full border border-transparent bg-greeny px-8 py-3 text-center font-medium text-white hover:bg-greeny-500 active:bg-greeny-900 transition-all">Don't just Code.. Code Smart</a>
             </div>
           </div>
         </div>
@@ -148,15 +141,13 @@
       <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
         <div class="lg:pr-8 lg:pt-4">
           <div class="lg:max-w-lg">
-            <h2 class="text-base font-semibold leading-7 text-greeny">Empower Your Coding</h2>
+            <h2 class="empower text-base font-semibold leading-7 text-greeny">Empower Your Coding</h2>
             <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Unleash CodeSmith's Power</p>
-            <p class="mt-6 text-lg leading-8 text-gray-600">At CodeBuddy, we redefine software development. Experience
-              the future of coding with streamlined workflows and efficient deployment practices that inspire
-              innovation.</p>
+            <p class="About mt-6 text-lg leading-8 text-gray-600">CodeSmith, effortlessly translates and generates code across languages with precision and speed, revolutionizing development workflows.</p>
             <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
               <div class="relative pl-9">
-                <dt class="inline font-semibold text-gray-900">
-                  <svg class="absolute left-1 top-1 h-5 w-5 text-greeny" viewBox="0 0 20 20" fill="currentColor"
+                <dt class="feature inline font-semibold text-gray-900">
+                  <svg class="absolute left-1 top-1 h-5 w-5 text-greeny" viewBox="" fill="currentColor"
                     aria-hidden="true">
                     <path fill-rule="evenodd"
                       d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z"
@@ -164,10 +155,10 @@
                   </svg>
                   Code Translation and Generation,
                 </dt>
-                <dd class="inline">Seamlessly translates code from diverse programming languages into the desired target language while also generating code snippets as needed.</dd>
+                <dd class="detail inline">Seamlessly translates code from diverse programming languages into the desired target language while also generating code snippets as needed.</dd>
               </div>
               <div class="relative pl-9">
-                <dt class="inline font-semibold text-gray-900">
+                <dt class="feature inline font-semibold text-gray-900">
                   <svg class="absolute left-1 top-1 h-5 w-5 text-greeny" viewBox="0 0 20 20" fill="currentColor"
                     aria-hidden="true">
                     <path fill-rule="evenodd"
@@ -176,10 +167,10 @@
                   </svg>
                   Syntax Preservation,
                 </dt>
-                <dd class="inline">Ensures the translated and generated code maintains the original syntax and structure, preserving logic and readability.</dd>
+                <dd class="detail inline">Ensures the translated and generated code maintains the original syntax and structure, preserving logic and readability.</dd>
               </div>
               <div class="relative pl-9">
-                <dt class="inline font-semibold text-gray-900">
+                <dt class="feature inline font-semibold text-gray-900">
                   <svg class="absolute left-1 top-1 h-5 w-5 text-greeny" viewBox="0 0 20 20" fill="currentColor"
                     aria-hidden="true">
                     <path
@@ -190,7 +181,7 @@
                   </svg>
                   User-Friendly Interface,
                 </dt>
-                <dd class="inline">
+                <dd class="detail inline">
                   Provides an intuitive platform, facilitating effortless translation and code generation for developers without unnecessary complexities.</dd>
               </div>
             </dl>
@@ -228,7 +219,7 @@
         </div>
            
       </div>
-      <div class="counter"><p>Visitor count</p><<img src="https://hitwebcounter.com/counter/counter.php?page=10452889&style=0038&nbdigits=5&type=ip&initCount=0" title="Visitors Count"/></a>
+      <div class="counter"><p class="visitor">Visitor count</p><<img src="https://hitwebcounter.com/counter/counter.php?page=10452889&style=0038&nbdigits=5&type=ip&initCount=0" title="Visitors Count"/></a>
       </div> 
         
       </div>
@@ -236,14 +227,9 @@
   </div>
       
   <script>
-    function loader(){
-      document.querySelector('.loader-container').classList.add('fade-out');
-    }
-    function fadeOut(){
-        setInterval(loader,3000);
-    }
-   window.onload = fadeOut;
+   
   </script> 
 </body>
 
 </html>
+
