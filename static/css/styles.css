@@ -144,7 +144,7 @@ body {
     background-color: #000000;
     color: #fff;
 }
-
+.dark-mode .navbar
 
 .dark-mode .form-group input,
 .dark-mode .form-group select,
@@ -244,13 +244,17 @@ left: 0;
 }
 
 /* Adjustments for the textarea */
-#inputcode {
+#inputcode,#targetcode {
 width: 618px;
+height:350px;
 padding: 8px;
-border-color:black;
+border-color:rgb(255, 254, 254);
 border-radius: 4px;
 box-sizing: border-box;
-
+}
+#targetcode{
+    width:100%;
+    height:350px;
 }
 .row {
 display: flex;
@@ -260,6 +264,7 @@ margin-left:-100px;
 .column-left,
 .column-right {
     width: 50%;
+    height:500px;
     box-sizing: border-box;
     backdrop-filter: blur(2px);
     border: 2px solid rgba(255, 255, 255, 255); /* Adjust transparency */
@@ -314,20 +319,18 @@ margin-left:-100px;
     color: #ddd;
 }
 .dark-mode .navbar {
-    overflow: hidden;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     margin-top:-20px;
     margin-bottom:35px;
     border-radius:8px;
+    height:48px;
+    z-index:-20;
 }
 
 .dark-mode .navbar a {
-    float: left;
-    display: block;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
     font-size: 17px;
 }
 
@@ -385,6 +388,7 @@ input[type="text"],
 .fixed-dropdown {
 width: 617px;
 resize:none;
+
 padding: 8px;
 overflow-x: scroll;
 border-radius: 6px;
@@ -399,6 +403,9 @@ border-color:black;
 background-color: black; 
 color: white; 
 border-color: white;
+}
+.dark-mode .navbar1{
+    z-index:2;
 }
 
 .loader-container{
@@ -415,10 +422,6 @@ width: 100%;
 .loader-container.fade-out{
 top: -120%;
 }
-textarea{
-    width: 659px; 
-    height: 378px;
-  }
 
 .dark-mode .column-left{
     border-color:white;
@@ -468,15 +471,47 @@ text-align: center;
 
 
 @media screen and (max-width: 768px) {
-    .container {
-        text-align: center;
-        max-width: 80%; /* Adjust maximum width for smaller screens */
-        padding: 10px; /* Modify padding for smaller screens */
-        margin: 0 auto; /* Center the container */
+    .navbar {
+        height:60px;
+        width:100%;
+        margin-top: -20px; /* Adjust margin */
+        border-radius: 8px; /* Rounded corners */
+    }
+    .dark-mode .navbar {
+        height:60px;
+        width:100%;
+        border-radius: 8px;
+        background-color: black; /* Rounded corners */
+    }
+    .body{
+        background-color:black;
+    }
+    .navbar a {
+        margin-right:20px;
+        font-size: 15px;
+        justify-content: space-between;
+        padding: 5px; /* Adjust padding */
+     /* Adjust font size */
+    }
+    .dark-mode .navbar a {
+        margin-right:20px;
+        font-size: 15px;
+        justify-content: space-between;
+        padding: 5px;  /* Adjust font size */
+    }
+    .mode{
+        margin-left:90%;
+        width:40px;
+        height:40px;
+    }
+    .dark-mode  .mode{
+        margin-left:-20%;
+        width:40px;
+        height:40px;
     }
     .container {
-        max-width: 20px;
-        margin: 0 auto;
+        font-size:12px;
+        max-width: 90%;
         padding: 20px;
         border-radius: 10px;
         background-color: rgba(255, 255, 255, 0.1); /* Adjust transparency */
@@ -486,67 +521,93 @@ text-align: center;
         border-color:black;
         -webkit-backdrop-filter: blur(5px); /* For Safari */
     }
-
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center columns horizontally */
+        padding: 20px;
+      }
+  
+      .column {
+        width: 80%; /* Adjust width as needed */
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 10px;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+  
+      .form-group {
+        margin-bottom: 15px;
+      }
+  
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .rightcol{
+        margin-left:25%;
+      }
+      select, textarea {
+        width: 100%;
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+      .form-group.option label{
+        font-size:12px;
+      }
+    .column-left,
+    .rightcol{
+        width: 90%;
+        font-size: 10px;
+        height:500px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        margin-bottom: 20px;
+        border-color:white;
+        }
+        .rightcol{
+            height:400px;
+        }
     /* Adjust width for input fields and dropdowns */
-    .form-group input[type="text"],
-    .form-group input[type="password"],
-    .form-group select,
-    .fixed-dropdown,
-    #inputcode,
-    textarea {
-        width: 60%; /* Full width for inputs on smaller screens */
+    #inputcode{
+        height:100%;
     }
- 
+    #targetcode{
+        height:250px;
+    }
+    .mode{
+        margin-left:90%;
+    }
+    .codeclear {
+        margin-top:30%;
+        background: #007bff;
+        border: 1px solid #007bff;
+        color: #fff;
+        width: 10%;
+        margin-left: 70%;
+        margin-top: -54px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
     #inputcode
     {
-        width:480px;
-        height:500px;
+        width:100%;
+        height:250px;
     }
-    /* Adjust width for code inputs */
+/* 
     .code {
         width: 0%;
-        height: 100px;
+        height: 300px;
     }
-    textarea{
-        width:400px;
-    }
+     */
 
-    .column-left,
-    .column-right {
-    width: 500px;
-    padding: 10px;
-    height:250px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    margin-bottom: 20px;
-  }
-  .generatedCode {
-    height:500px;
-  }
-  textarea{
-    width:480px;
-  }
-  .column-left{
-    margin-left:100px;
-  }
-  .column-right
-  {
-    height:800px;
-  }
-  .column-right
-  {
-    margin-top:75%;
-    margin-left:-530px;
-  }
-    /* Navbar adjustments for smaller screens */
-    .navbar {
-        margin-top: -20px; /* Adjust margin */
-        margin-bottom: 20px; /* Adjust margin */
-        border-radius: 8px; /* Rounded corners */
-    }
 
-    .navbar a {
-        padding: 10px; /* Adjust padding */
-        font-size: 14px; /* Adjust font size */
-    }
+  
+    
 }

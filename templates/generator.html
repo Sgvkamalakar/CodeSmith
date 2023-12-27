@@ -28,10 +28,7 @@
 </head>
   
 <body>
-  <div class="gif-container"></div>
-  <div class="loader-container">
-    <img draggable="false" src="/static/images/preloader.gif" alt="">
-  </div>
+ 
   <div id="particles-js">
   <div class="navbar">
     <a href="../index.html"><i class="fa-solid fa-house"></i></a>
@@ -63,7 +60,7 @@
     </div>
     
     <div class="row">
-      <div class="column-left">
+      <div class="column-left" style="height:550px;">
           <div class="form-group option">
               <label>Enter your prompt</label>
             </div>
@@ -80,12 +77,13 @@
                 <img src="/static/images/success.gif" alt="Animated GIF" class="animated-gif">
               </div>
             </div>
-              <textarea id="promptTextArea" name="promptTextArea" placeholder="Enter your prompt here" required></textarea>
+            <div class="promptTextArea">
+              <textarea id="promptTextArea" style="height:400px;" name="promptTextArea" placeholder="Enter your prompt here" required></textarea></div>
               </div>
           
       </div>
     
-      <div class="column-right">
+      <div class="rightcol column-right" style="height:700px">
           <div class="form-group option">
               <label for="dropdownRight">Your code in</label>
               <select id="target_lang" name="target_lang" class="fixed-dropdown">
@@ -129,14 +127,14 @@
                 <img src="/static/images/clear.gif" alt="Animated GIF" class="animated-gif">
               </div>
             </div>
-            <textarea id="CodeArea" name="CodeArea"  placeholder="Your target code"></textarea>
+            <textarea id="CodeArea" name="CodeArea" style="height:400px;" placeholder="Your target code"></textarea>
         </div>
         <div class="code-display">
           <div class="form-group option">
-          <label for="dropdownRight">Output</label>
+          <label for="dropdownRight" style="margin-top:20px;">Output</label>
           </div>
           <div id="generatedCode" class="code"></div>
-          <textarea id="OutputArea" placeholder="Output" value="Output"></textarea>
+          <textarea id="OutputArea" placeholder="Output" style="height:90px;" value="Output"></textarea>
         </div>
       
       </div>
