@@ -569,7 +569,8 @@ text-align: center;
         border-color:white;
         }
         .rightcol{
-            height:400px;
+            height:500px;
+            margin-left:15%;
         }
     /* Adjust width for input fields and dropdowns */
     #inputcode{
