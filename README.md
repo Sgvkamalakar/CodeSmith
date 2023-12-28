@@ -1,4 +1,3 @@
-
 # CodeSmith
 
 [Use CodeSmith Web App](https://code-smith.vercel.app/)
