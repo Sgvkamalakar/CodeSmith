@@ -245,17 +245,14 @@ left: 0;
 
 /* Adjustments for the textarea */
 #inputcode,#targetcode {
-width: 618px;
+width: 100%;
 height:350px;
 padding: 8px;
 border-color:rgb(255, 254, 254);
 border-radius: 4px;
 box-sizing: border-box;
 }
-#targetcode{
-    width:100%;
-    height:350px;
-}
+
 .row {
 display: flex;
 width: 100%;
@@ -367,17 +364,18 @@ button.btn.codeclear {
     background: #007bff;
     border: 1px solid #007bff;
     color: #fff;
-    width: 10%;
-    margin-left: 70%;
-    margin-top: -54px;
+    width: 15%;
+    margin-left: 65%;
+    margin-top: -50px;
     margin-bottom: 40px;
     text-align:center;
+
 }
 button.btn.codecopy {
     background: #28a745;
     border: 1px solid #28a745;
     color: #fff;
-    width: 10%;
+    width: 15%;
     margin-left: 85%;
     margin-top: -72px;
     margin-bottom: 40px;
@@ -470,7 +468,7 @@ text-align: center;
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1500px) {
     .navbar {
         height:60px;
         width:100%;
