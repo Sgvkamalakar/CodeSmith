@@ -145,7 +145,10 @@ body {
     color: #fff;
 }
 .dark-mode .navbar
-
+{
+    border:1px solid;
+}
+.dark-mode .navbar,
 .dark-mode .form-group input,
 .dark-mode .form-group select,
 .dark-mode .form-group textarea,
@@ -601,7 +604,5 @@ text-align: center;
     {
         width:100%;
         height:250px;
-    }
- 
-    
+    }    
 }
